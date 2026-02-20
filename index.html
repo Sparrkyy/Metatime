@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meta-Time</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="day-mode">
+
+    <!-- Permission / intro screen -->
+    <div id="permission-screen">
+      <div class="permission-card">
+        <h1>Meta-Time</h1>
+        <p class="tagline">A clock where every day and every night<br>lasts exactly 12 hours — no matter what.</p>
+        <p class="description">
+          Meta-time stretches and compresses to fit your actual daylight hours.
+          Share your location so we can calculate your real sunrise and sunset.
+        </p>
+        <button id="btn-location" class="btn-primary">Share Location</button>
+        <button id="btn-default" class="btn-secondary">Use Default (New York)</button>
+        <p class="footnote">Your location never leaves your device.</p>
+      </div>
+    </div>
+
+    <!-- Main app -->
+    <div id="app" style="display:none;">
+      <canvas id="clock-canvas"></canvas>
+
+      <!-- Overlay UI -->
+      <div id="overlay">
+        <div id="meta-time-display">
+          <span id="meta-time-string">00:00:00</span>
+          <span id="meta-period-label">Day</span>
+        </div>
+        <div id="meta-info">
+          <span id="meta-second-info">1 meta-second = — real seconds</span>
+          <span id="sun-info"></span>
+        </div>
+      </div>
+
+      <div id="location-label"></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
